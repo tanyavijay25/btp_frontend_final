@@ -1,0 +1,88 @@
+.c1{
+    color: black;
+    background-image: url('C:/Users/Prakhar Srivastava/Downloads/btp-frontend/my-app/src/components/forum/images/im/peakpx.jpg');
+    background-size: cover;
+    display:inline-flexbox;
+    background-repeat: repeat;
+    height: 100%;
+    width: 100%;
+  }
+  .alignaddbutton{
+    margin-right: 30px;
+    margin-top: 20px;
+    float: right;
+  }
+.addbutton{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* padding: auto; */
+    font-size: 20px;
+    
+    /* font-weight: bold; */
+    color: beige;
+    background-color:#232222;
+    border-radius: 10px;
+    }
+    .addbutton2{
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      /* margin-bottom: 10px; */
+      margin-left: 20px;
+      margin-top: 2px;
+      /* padding: 10px; */
+      font-weight:bold;
+      font-size: 15px;
+      float: left;
+      color: black;
+      background-color: rgba(255, 234, 234, 0.45);
+      border-radius: 10px;
+      border: 0px;
+      }
+
+      .h1heading1{
+        padding: 40px;
+        /* margin-left: 45%; */
+        float: center;
+        font-size: 50px;
+        letter-spacing: 3px;
+        text-align: center;
+        font-family: 'Fjalla One', sans-serif;
+      }
+.addbutton3{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        /* margin-bottom: 10px; */
+        /* margin-left: 20px;
+        margin-top: 10px; */
+        margin-top: 10px; 
+        font-size: 20px;
+        float: right;
+        /* font-weight: bold; */
+        color: black;
+        background-color: rgba(254, 254, 254, 0.45);
+        /* background-color:#232222; */
+        border-radius: 10px;
+        border: 0px;
+        }
+    .s1{
+      /* display: inline; */
+      padding-bottom: 0;
+      float: left;
+      margin-left: 70px;
+      margin-bottom: 0;
+      font-size: 20px;
+    }
+    .s2{
+      display: flex;
+      /* padding-bottom: 0;
+      float: left; */
+    }
+.tablechanges{
+    font-size: 20px;
+}    

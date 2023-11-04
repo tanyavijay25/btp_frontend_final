@@ -1,0 +1,193 @@
+.back1t{
+    height: 100%;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    display:inline-flexbox;
+    background-repeat: repeat;
+    background-size: cover;
+    background-image: url('C:/Users/Prakhar Srivastava/Downloads/btp-frontend/my-app/src/components/forum/images/im/blur3.PNG');
+}
+.bgcolor1t{
+    background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    height:100%;
+    width: 100%;
+    }
+
+
+.alignaddbuttont{
+        margin-right: 30px;
+        margin-top: 20px;
+        float: right;
+      }
+.addbuttont{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 20px;
+        color: beige;
+        background-color:#232222;
+        border-radius: 10px;
+        }
+.addbutton2t{
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          margin-left: 20px;
+          margin-top: 2px;
+          font-weight:bold;
+          font-size: 15px;
+          float: left;
+          color: black;
+          background-color: rgba(255, 234, 234, 0.45);
+          border-radius: 10px;
+          border: 0px;
+          }
+.h1heading1t{
+            padding: 40px;
+            float: center;
+            font-size: 50px;
+            letter-spacing: 3px;
+            text-align: center;
+            font-family: 'Fjalla One', sans-serif;
+          }
+.h1heading2t{
+            padding: 40px;
+            color: black;
+            float: center;
+            font-size: 25px;
+            letter-spacing: 3px;
+            text-align: center;
+            font-family: 'Fjalla One', sans-serif;
+          }
+    
+.addbutton3t{
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 10px; 
+            font-size: 20px;
+            float: right;
+            color: black;
+            background-color: rgba(255, 234, 234, 0.45);
+            border-radius: 10px;
+            border: 0px;
+            }
+    
+    
+
+
+/*for card*/
+    .img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .l-card {
+        border-radius: 10px;
+        height:auto;
+        color: #0b0a0a;
+        padding: 20px;
+        object-fit: cover;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+        margin:0 50px 50px 50px;
+        background-color: rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(100px);
+    }
+    
+    .l-card__text {
+        font-size: 30px;
+        font-family: "Vollkorn", serif;
+        font-weight: 400;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+    .votes{
+        color: rgb(0, 0, 0);
+        align-content: center;
+        float: right;
+        font-weight:bold;
+        font-size: 15px;
+        padding-right: 30px;
+        padding-top: 2px;
+    }
+    
+    .align{
+        padding: 5px;
+        /* margin-left:200px ; */
+        /* padding: auto; */
+        display:inline-flexbox;
+        /* align-items: center; */
+        /* background-color: #3f3f55; */
+    }
+    .a2{
+        padding: 15px;
+    }
+    .btn1{
+        background-color: #3f3f55;
+    }
+    .l-card__text p::after {
+        content: "\201D";
+        display: inline;
+        color: #999;
+    }
+    
+    .l-card__text p::before {
+        content: "\201C";
+         display: inline; 
+        color: #999;
+    } 
+    
+     .l-card__user {
+        display: flex;
+        flex-direction: row;
+        padding-top: 24px;
+        margin-top: 12px;
+        border-top: 1px solid #c1c1c1;
+         align-items: center;
+    }
+    .l-card__userImage {
+        width: 42px;
+        height: 42px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    
+    .l-card__userImage img {
+        width: 100%;
+        height: 100%;
+        
+    }
+    
+    .l-card__userInfo {
+        display: flex;
+        flex-direction: column;
+        margin-left: 16px;
+    } 
+    
+     .l-card__userInfo span:nth-child(1) {
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 14px;
+        color: #3f3f55;
+    }
+    .l-card__userInfo span:nth-child(2) {
+        color: #adada6;
+        font-family: sans-serif;
+        font-size: 12px;
+        margin-top: 2px;
+    } 
+    
+/* .bgcolory{
+    background-image: url('D:/react_project/first-project/btp-frontend-main/btp-front/src/components/forum/images/im/subreddit2.PNG');
+    display:inline-flexbox;
+    background-repeat: repeat;
+    background-size: cover;
+    color: black;
+    height: 100%;
+    width:100%;
+    } */

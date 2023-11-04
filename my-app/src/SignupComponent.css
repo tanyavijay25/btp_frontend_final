@@ -1,0 +1,44 @@
+.field{
+    width: 500px;
+    margin-left:13% ;
+}
+.align{
+    
+    margin-left: 0px;
+    margin-right:450px ;
+    
+}
+.a1{
+    font-weight: bold;
+    padding-top: 0px;
+    /* padding-bottom: 2px; */
+}
+.a2{
+    margin-left:13% ;
+    text-align: left;
+}
+.chkboxalign{
+     /* margin-left: 15%;  */
+    /* padding-left: 0px; */
+    margin-left: 0;
+    padding-right: 50px;
+    padding-bottom: 10px;
+}
+.border1{
+    
+    color: beige;
+    margin-top: 25px;
+    margin-left: 400px;
+    margin-right: 425px;
+    border-radius: 10px;
+    border: 5px solid black;
+    background-image: url('C:/Users/Prakhar Srivastava/Downloads/btp-frontend/my-app/src/components/forum/images/im/signupbg.PNG');
+}
+.savebtn{
+    font-weight: bold;
+    color: beige;
+    padding-top: 0px;
+    background-color: rgb(27, 27, 28);
+    /* padding-bottom: 30px; */
+    margin-bottom: 30px;
+    }

@@ -1,0 +1,66 @@
+
+.heading{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    /* padding: 50px 50px 50px 50px 80px; */
+    font-family:  'Fjalla One', sans-serif;
+}
+.usernamefieldx{
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+.passwordfieldx{
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+.borderx{
+    /* color: beige; */
+    
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 5px solid rgba(255, 255, 255, 0.45);
+    color:beige;
+    background-color: rgba(255, 255, 255, 0.15);
+    /* background-image: url('D:/react_project/first-project/btp-frontend-main/btp-front/src/components/forum/images/im/loginbg.PNG');  */
+}
+.loginbuttonx{
+    width: 190px;
+    margin-top: 30px;
+    background-color: black;
+}
+.ptagx{
+    
+    /* margin-left: 80px;
+    margin-right:300px ; */
+    font-size: large;
+    color: rgb(45, 47, 48);
+    float: left;
+    
+}
+.bgcolorx{
+    /* height: ;  */
+    /* display: inline-block; */
+    
+
+    background-size: cover;
+    /* background-image: url('D:/react_project/first-project/btp-frontend-main/btp-front/src/components/forum/images/im/CreateQuestionComponent.jpg'); */
+    background-image: url('C:/Users/Prakhar Srivastava/Downloads/btp-frontend/my-app/src/components/forum/images/im/subreddit.PNG');
+    
+    position: absolute;
+    height: 100%;
+    width:100%;
+    /* background-image: url('/btp-front/src/components/forum/images/im/gradientbg2.PNG'); */
+    
+}
+.blur{
+    backdrop-filter:blur(10px);
+    position: absolute;
+    height: 100%;
+    width:100%;
+}
+

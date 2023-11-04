@@ -1,0 +1,122 @@
+.c1q{
+    color: black;
+    background-image: url('C:/Users/Prakhar Srivastava/Downloads/btp-frontend/my-app/src/components/forum/images/im/Capture2.PNG');
+    background-size: cover;
+    display:inline-flexbox;
+    background-repeat: repeat;
+    height: 100%;
+    width: 100%;
+  }
+  .alignaddbuttonq{
+    margin-right: 30px;
+    margin-top: 20px;
+    float: right;
+  }
+  .l-cardq{
+    font-family: "Vollkorn", serif;
+    font-size: 20px;
+    text-align: left;
+	border-radius: 10px;
+	height:auto;
+    color: #0b0a0a;
+	padding: 20px;
+    object-fit: cover;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    margin:0 260px 0px 260px;
+	background-color: rgba(255, 255, 255, 0.35);
+	backdrop-filter: blur(100px);
+}
+.l-cardq1{
+    font-family: "Vollkorn", serif;
+    text-align: center;
+	border-radius: 10px;
+	height:auto;
+    color: #0b0a0a;
+	padding: 20px;
+    object-fit: cover;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    margin:50px 50px 0px 50px;
+	background-color: rgba(255, 255, 255, 0.35);
+	backdrop-filter: blur(100px);
+}
+.l-card__textq{
+	font-size: 20px;
+	font-family: "Vollkorn", serif;
+	color: rgb(0, 0, 0);
+	text-align:start;
+}
+.bottom{
+    /* margin-bottom: 50px; */
+    font-size: 15px;
+    }
+.addbuttonq{
+    font-family: "Vollkorn", serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    /* padding: auto; */
+    font-size: 20px;
+    font-weight: bold;
+    /* font-weight: bold; */
+    color: rgb(0, 0, 0);
+    /* background-color:#232222; */
+    border-radius: 10px;
+    }
+    .addbutton2q{
+        font-family: "Vollkorn", serif;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      /* margin-bottom: 10px; */
+      margin-left: 20px;
+      margin-top: 2px;
+      /* padding: 10px; */
+      font-weight:bold;
+      font-size: 18px;
+      /* float: left; */
+      color: black;
+      background-color: rgba(85, 46, 46, 0.45);
+      border-radius: 10px;
+      border: 0px;
+      }
+
+      .h1heading1q{
+        padding: 40px;
+        /* margin-left: 45%; */
+        float: center;
+        font-size: 50px;
+        letter-spacing: 3px;
+        text-align: center;
+        font-family: 'Fjalla One', sans-serif;
+      }
+.addbutton3q{
+    font-family: "Vollkorn", serif;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-right: 10px;
+        padding-bottom: 5px;
+        font-size: 20px;
+        float: left;
+        color: black;
+        background-color: rgba(254, 254, 254, 0.45);
+        border-radius: 10px;
+        border: 0px;
+        }
+    .s1q{
+      /* display: inline; */
+      padding-bottom: 0;
+      float: left;
+      margin-left: 70px;
+      margin-bottom: 0;
+      font-size: 20px;
+    }
+    .s2q{
+      display: flex;
+      /* padding-bottom: 0;
+      float: left; */
+    }
+.tablechangesq{
+    font-size: 20px;
+}    

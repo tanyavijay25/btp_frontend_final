@@ -1,0 +1,40 @@
+.h1heading{
+    padding: 30px 50px 50px 50px 50px;
+    font-family:  'Fjalla One', sans-serif;
+}
+.usernamefield{
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+.passwordfield{
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+.border{
+    color: beige;
+    margin-left: 550px;
+    margin-right: 550px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 10px solid black;
+    background-image: url('C:/Users/Prakhar Srivastava/Downloads/btp-frontend/my-app/src/components/forum/images/im/loginbg.PNG');
+}
+.loginbutton{
+    width: 190px;
+    margin-top: 30px;
+}
+.ptag{
+    
+    margin-left: 80px;
+    margin-right:300px ;
+    
+}
+.bgcolor{
+    background-size: cover;
+    background-color: beige;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    height:100%;
+}
