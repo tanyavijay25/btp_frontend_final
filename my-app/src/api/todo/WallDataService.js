@@ -71,6 +71,14 @@ class WallDataService {
         console.log('walldataservice',comment_deets)
         return axios.post(`${JPA_API_URL}/users/${question_id}/addcomment`, comment_deets);
     }
+
+
+    deletecomment(question_id,comment_deets)
+    {
+        return axios.post(`${JPA_API_URL}/users/${question_id}/deletecomment`, comment_deets);
+    }
+
+
     retrievequestionsinparentforum(parent_id)
     {
         return axios.get(`${JPA_API_URL}/users/${parent_id}/allquestions`);
@@ -108,8 +116,14 @@ class WallDataService {
     {
         return axios.get(`${API_URL}/finduserbyusername/${userid}`);
     }
-   
-
-    
+    allUsers(){
+        return axios.get((`${API_URL}/allusers`))
+    }
+    banUser(email_id){
+        return axios.get(`${API_URL}/finduserbyemail/${email_id}`)
+    }
+    findBannedUser(user_id){
+        return axios.get(`${API_URL}/findbanneduser/${user_id}`)
+    }
 }
 export default new WallDataService()

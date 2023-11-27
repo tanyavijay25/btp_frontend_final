@@ -8,7 +8,9 @@ class AuthenticationService {
     executeJwtAuthenticationService(username, password) {
         return axios.get(`${JPA_API_URL}/authenticate/${username}/${password}`)
     }
-
+    executeJwtAuthenticationServiceAdmin(username, password) {
+        return axios.get(`${JPA_API_URL}/AdminAuthenticate/${username}/${password}`)
+    }
 
     registerSuccessfulLoginForJwt(username) {
         sessionStorage.setItem(USER_NAME_SESSION_ATTRIBUTE_NAME, username)

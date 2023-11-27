@@ -1,6 +1,6 @@
 .c1q{
     color: black;
-    background-image: url('C:/Users/Prakhar Srivastava/Downloads/btp-frontend/my-app/src/components/forum/images/im/Capture2.PNG');
+    background-image: url('D:/react_project/first-project/btp-frontend-main/btp-front/btp-frontend/my-app/src/components/forum/images/im/Capture2.PNG');
     background-size: cover;
     display:inline-flexbox;
     background-repeat: repeat;
@@ -104,6 +104,19 @@
         border-radius: 10px;
         border: 0px;
         }
+        .addbutton100q{
+          font-family: "Vollkorn", serif;
+              padding-left: 10px;
+              padding-right: 10px;
+              margin-right: 10px;
+              padding-bottom: 5px;
+              font-size: 20px;
+              float: right;
+              color: black;
+              background-color: rgba(254, 254, 254, 0.45);
+              border-radius: 10px;
+              border: 0px;
+              }
     .s1q{
       /* display: inline; */
       padding-bottom: 0;

@@ -10,7 +10,7 @@
     background-size: cover;
     /* backdrop-filter: blur(5px); */
     
-    background-image: url('C:/Users/Prakhar Srivastava/Downloads/btp-frontend/my-app/src/components/forum/images/im/blur2.PNG');
+    background-image: url('D:/react_project/first-project/btp-frontend-main/btp-front/btp-frontend/my-app/src/components/forum/images/im/blur2.PNG');
 }
 
 
@@ -38,6 +38,23 @@
     background-color:#232222;
     border-radius: 10px;
     }
+   
+    .banUser{
+      display: flex;
+      margin-left: 270px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      /* padding: auto; */
+      
+      font-size: 20px;
+      /* position: relative; */
+      /* font-weight: bold; */
+      color: beige;
+      background-color:#232222;
+      border-radius: 10px;
+      }
     .addbutton2{
       padding-left: 10px;
       padding-right: 10px;

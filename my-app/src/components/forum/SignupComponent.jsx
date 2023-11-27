@@ -31,7 +31,10 @@ class SignupComponent extends Component {
         let username = AuthenticationService.getLoggedInUserName()
         console.log(values);
         console.log(this.state);
-        if(values.usertype==='College')
+        WallDataService.findBannedUser(values.username)
+            .then((response) => {
+                if(response.data===0){
+                    if(values.usertype==='College')
         {
             console.log('college students')
             if(values.useremail.endsWith("@lnmiit.ac.in"))
@@ -45,29 +48,45 @@ class SignupComponent extends Component {
                     question_id_list:[]
                 }
                 console.log('verified')
-                WallDataService.new_user(todo);
-                this.props.history.push('/wall')
+
+                WallDataService.new_user(todo)
+                .then((response) =>
+                {
+                    console.log('college student chking???',response)
+                    if(response.data===0)
+                    {
+                        console.log('aaya yahannnn',response)
+                        this.setState({ message: `username already taken` })
+                        alert("Username already taken")
+                        
+                actions.resetForm({
+                    values: {
+                      // the type of `values` inferred to be Blog
+                      title: '',
+                      image: '',
+                      body: '',
+                    },
+                    // you can also set the other form states here
+                  });
+                  actions.setValues(this.state.initialValues);
+                  window.location.reload();
+                        // this.props.history.push('/signup')
+                    }
+                    else{
+                    console.log('aaye kyaa')
+                    this.props.history.push('/wall')
+                    }
+                })
+
+
+                // WallDataService.new_user(todo);
+                // this.props.history.push('/wall')
 
 
             }
             else
             {
-            //   //  setErrors({ username: 'This is a dummy procedure error' });
-            //     console.log('not verified')
-            //   // resetForm({values:''});
-            //    //resetForm();
-            //    onSubmitProps.setSubmitting(false)
-            //    onSubmitProps.resetForm();
-            //   // setSubmitting(false);
-            // //    helpers.resetForm({
-            // //     values,
-            // //   });
-            //     this.props.history.push('/signup')
-            // onSubmitProps.resetForm();
-            //     this.resetmethod()
-              //  this.state. onShowAlert()
-             //   setErrorMessage('Example error message!');
-             actions.setSubmitting(false);
+            actions.setSubmitting(false);
                 actions.resetForm({
                     values: {
                       // the type of `values` inferred to be Blog
@@ -102,6 +121,7 @@ class SignupComponent extends Component {
                     {
                         console.log('aaya yahannnn',response)
                         this.setState({ message: `username already taken` })
+                        alert("Username already taken")
                         
                 actions.resetForm({
                     values: {
@@ -111,7 +131,7 @@ class SignupComponent extends Component {
                       body: '',
                     },
                     // you can also set the other form states here
-                  });
+                  })
                   actions.setValues(this.state.initialValues);
                   window.location.reload();
                         // this.props.history.push('/signup')
@@ -122,6 +142,18 @@ class SignupComponent extends Component {
                     }
                 })
         }
+                }
+                else{
+                    
+                    this.setState({ showSuccessMessage: false })
+                    this.setState({ hasLoginFailed: true })
+                    alert("This account has been blocked.")
+                    window.location.reload();
+                }
+            }).catch(() => {
+                this.setState({ showSuccessMessage: false })
+                this.setState({ hasLoginFailed: true })
+            })
     }
 
 
@@ -175,10 +207,10 @@ class SignupComponent extends Component {
                                             <Field type="radio" name="usertype" value="College" />
                                                 College Students
                                             </label>
-                                            <label >
+                                            {/* <label >
                                             <Field type="radio" name="usertype" value="Admin" />
                                                 Admin
-                                            </label>
+                                            </label> */}
                                         </div>
                                         </div>
                                     </fieldset>

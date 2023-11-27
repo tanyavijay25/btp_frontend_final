@@ -42,16 +42,17 @@ class HeaderComponent extends Component {
         const isUserLoggedIn = AuthenticationService.isUserLoggedIn();
         //console.log(isUserLoggedIn);
         let username = AuthenticationService.getLoggedInUserName()
-
+        let admin="Admin1"
+        let chk= admin===username
         return (
             <header>
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                     <div><a href="/" className="navbar-brand">LNMIIT Counselling Forum</a></div>
                     <ul className="navbar-nav">
-                        {isUserLoggedIn && <li><Link className="nav-link" to={`/homepage/${AuthenticationService.getLoggedInUserName()}`}>My Wall</Link></li>}
-                        {isUserLoggedIn && <li><Link className="nav-link" to="/wall">Main Wall</Link></li>}
-                        {isUserLoggedIn && <li><Link className="nav-link" to="/add_forum"> Add Forum</Link></li>}
-                        {}
+                        {isUserLoggedIn && !chk &&<li><Link className="nav-link" to={`/homepage/${AuthenticationService.getLoggedInUserName()}`}>My Wall</Link></li>}
+                        {isUserLoggedIn && !chk &&<li><Link className="nav-link" to="/wall">Main Wall</Link></li>}
+                        {isUserLoggedIn && !chk &&<li><Link className="nav-link" to="/add_forum"> Add Forum</Link></li>}
+                        {isUserLoggedIn && chk &&<li><Link className="nav-link" to={`/adminloginhomepage/${AuthenticationService.getLoggedInUserName()}`}> Ban Users </Link></li>}
                     </ul>
                     <ul className="navbar-nav navbar-collapse justify-content-end">
                         {!isUserLoggedIn && <li><Link className="nav-link" to="/signup">Signup</Link></li>}

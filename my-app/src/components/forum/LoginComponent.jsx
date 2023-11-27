@@ -17,6 +17,7 @@ class LoginComponent extends Component {
   
         this.handleChange = this.handleChange.bind(this)
         this.loginClicked = this.loginClicked.bind(this)
+        this.adminLoginClicked=this.adminLoginClicked.bind(this)
     }
 
     handleChange(event) {
@@ -30,8 +31,10 @@ class LoginComponent extends Component {
     }
 
     loginClicked() {
-        
-        AuthenticationService
+        WallDataService.findBannedUser(this.state.username)
+            .then((response) => {
+                if(response.data===0){
+                    AuthenticationService
             .executeJwtAuthenticationService(this.state.username, this.state.password)
             .then((response) => {
                 console.log(response)
@@ -49,8 +52,42 @@ class LoginComponent extends Component {
                 this.setState({ showSuccessMessage: false })
                 this.setState({ hasLoginFailed: true })
             })
+                }
+                else{
+                    this.setState({ showSuccessMessage: false })
+                    this.setState({ hasLoginFailed: true })
+                    alert("This account has been blocked.")
+                    window.location.reload();
+                }
+            }).catch(() => {
+                this.setState({ showSuccessMessage: false })
+                this.setState({ hasLoginFailed: true })
+            })
 
     }
+    adminLoginClicked() {
+        
+        AuthenticationService
+            .executeJwtAuthenticationServiceAdmin(this.state.username, this.state.password)
+            .then((response) => {
+                console.log(response)
+                if(response.data===1)
+                {
+                AuthenticationService.registerSuccessfulLoginForJwt(this.state.username)
+                this.props.history.push(`/adminloginhomepage/${this.state.username}`)
+                }
+                else
+                {
+                    this.setState({ showSuccessMessage: false })
+                    this.setState({ hasLoginFailed: true })
+                }
+            }).catch(() => {
+                this.setState({ showSuccessMessage: false })
+                this.setState({ hasLoginFailed: true })
+            })
+
+    }
+    
 
     render() {
         return (
@@ -73,6 +110,7 @@ class LoginComponent extends Component {
                         <p className='ptag'>Password</p>
                         <input type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handleChange} /></div>
                     <div ><button className="btn btn-success loginbutton" onClick={this.loginClicked}>Login</button></div>
+                    <div ><button className="btn btn-success loginbutton" onClick={this.adminLoginClicked}>Admin Login</button></div>
                     </div>
                 </div>
             </div>

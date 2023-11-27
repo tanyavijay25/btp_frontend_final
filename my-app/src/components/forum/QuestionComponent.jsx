@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { createContext } from 'react';
 import AuthenticationService from './AuthenticationService.js'
 import { Link } from 'react-router-dom';
 import { Formik, Field,Form } from 'formik';
@@ -17,17 +18,29 @@ class QuestionComponent extends Component
             question_id:this.props.match.params.id,
             question:[],
             comments:[],
+            user_Type:[],
             description: '',
         }
+        
         this.componentDidMount()
         console.log('this is question_id',this.state.question_id)
-        
+        this.onDelete =   this.onDelete.bind(this)
+        // this.findUserType= this.findUserType.bind(this)
         const isUserLoggedIn = AuthenticationService.isUserLoggedIn();
     }
 
     componentDidMount() {
         console.log('componentDidMount')
         this.questionpage(this.state.question_id);
+        let username = AuthenticationService.getLoggedInUserName()
+        console.log("findUser");
+            WallDataService.finduser(username)
+            .then(
+                response => {
+                    console.log("inside find user")
+                    this.setState({user_Type:response.data.user_type});
+                    }
+            )
        
     }
 
@@ -48,26 +61,23 @@ class QuestionComponent extends Component
             }
         )
     }
+    
     onSubmit(values)
     {
         console.log('came here')
-        console.log(this.state);
-        console.log('inside onsubmit : ',values);
+        // console.log('inside onsubmit : ',values);
         if(AuthenticationService.isUserLoggedIn())
         {
             let username = AuthenticationService.getLoggedInUserName()
-           
-          
             let comment_deets = {
-                user_id: username,
                 name: values.description,
-                
+                user_id: username,
+                user_type:this.state.user_Type,
             } 
-          
+            console.log(comment_deets.user_id,comment_deets.name,comment_deets.user_type)
             WallDataService.addcomment(this.state.question_id,comment_deets)
             .then(
                 response => {
-                    //console.log(response);
                     this.questionpage(this.state.question_id)
                 }
             )
@@ -79,16 +89,41 @@ class QuestionComponent extends Component
         }
 
     }
+    
+    onDelete(name1,id,type){
+        console.log('came here')
+        console.log(this.state);
+        // console.log('inside onDelete : ',values);
+        if(AuthenticationService.isUserLoggedIn())
+        {
+            let username = AuthenticationService.getLoggedInUserName()
+           
+          
+            let comment_deets = {
+                user_id: id,
+                name: name1,
+                user_type:type,
+                } 
+          
+            WallDataService.deletecomment(this.state.question_id,comment_deets)
+            .then(
+                response => {
+                    //console.log(response);
+                    this.questionpage(this.state.question_id)
+                }
+            )
+        }
+        else
+        {
+            console.log('login redirect in downvotevote clicked')
+            this.props.history.push(`/login`)
+        } 
 
+    }
     render()
     {
         console.log('Inside render 1 : ',this.state)
-       //  let {description} = this.state
-       // console.log('Inside render 2 : ',description)
-        
-        // this.setState(...this.state, description)
         console.log("inside the render")
-        //console.log("chus le",this.state.question_id)
         return(
         <div className='c1q'>
             <div className='addbuttonq'>Question</div>
@@ -125,33 +160,21 @@ class QuestionComponent extends Component
                     <div className='addbuttonq'> Other Comments</div>
             {
                this.state.comments.map(
-
+                
                   comment =>
-                 
                   <div>
-                    
+                  <div>
                     <div className='l-cardq1'>
-                        
-                    <div className='addbutton3q'> {!(comment===null)&&comment.user_id} -</div>
+                    <div className='addbutton3q'> {!(comment===null)&&comment.user_id} - {comment.user_type} </div>
                     <div className='l-card__textq'>{!(comment===null)&&comment.name} </div>
+                    {/* <div className='addbutton100q'>{!(comment===null)&&}</div> */}
                     </div>
-                    <div></div>
+                    <button className='addbutton2q' onClick={() => this.onDelete(comment.name,comment.user_id,comment.user_type)}>Delete</button>
+                    <div>
                     </div>
-                  
-                    /* <div className="l-card">
-                    <div >
-                    <button className='addbutton2' onClick={() => this.parentredditClicked(Wallmodel.subreddit_url)}> <span>{ Wallmodel.subreddit_name}</span></button>
                     </div>
-                    <div >
-                                                
-                    <section className='votes'>Votes: {Wallmodel.votes}</section>
-                    </div><div >
-                    <br></br>
-                                                    
-                    <section className="l-card__text">{Wallmodel.name}</section></div>
-                    <div > */
-
-
+                    
+                    </div>
                     )
                 
             

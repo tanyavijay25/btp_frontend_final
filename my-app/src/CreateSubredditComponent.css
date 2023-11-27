@@ -1,9 +1,9 @@
 .bgcolory{
     /* height: ;  */
     /* display: inline-block; */
-    
+    /* D:\react_project\first-project\btp-frontend-main\btp-front\btp-frontend\my-app\src\components\forum\images\im\bg2.PNG */
     /* color: black; */
-    background-image: url('C:/Users/Prakhar Srivastava/Downloads/btp-frontend/my-app/src/components/forum/images/im/subreddit2.PNG');
+    background-image: url('D:/react_project/first-project/btp-frontend-main/btp-front/btp-frontend/my-app/src/components/forum/images/im/subreddit2.PNG');
     /* background-size: cover; */
     display:inline-flexbox;
     background-repeat: repeat;

@@ -12,6 +12,7 @@ import CreateQuestionComponent from './CreateQuestionComponent';
 import CreateSubredditComponent from './CreateSubredditComponent';
 import QuestionComponent from './QuestionComponent';
 import HomepageComponent from './HomepageComponent';
+import AdminHomePageComponent from './AdminHomePageComponent.jsx'
 import WallComponent from './WallComponent';
 import ParentForumComponent from './ParentForumComponent';
 
@@ -28,6 +29,7 @@ class ForumApp extends Component {
                             <Route path="/" exact component={WallComponent}/>
                             <Route path="/login" component={LoginComponent}/>
                             <Route path="/signup" component={SignupComponent}/>
+                            {<Route path="/adminloginhomepage/:id" component={AdminHomePageComponent}/>}
                             { <Route path="/wall" component={WallComponent}/> }
                             <AuthenticatedRoute path="/:parent_id/addquestion" component={CreateQuestionComponent}/>
                             <AuthenticatedRoute path="/add_forum" component={CreateSubredditComponent}/>
